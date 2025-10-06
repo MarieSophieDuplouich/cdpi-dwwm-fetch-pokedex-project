@@ -1,0 +1,43 @@
+* {
+  /* border: black 1px solid; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.25em;
+  text-align: center;
+  background-color: #ef3e3e;
+}
+.grid-pokemon{
+column-count: 2;
+margin: 30px;
+
+}
+.pokemon{
+  background:#292929;
+  padding: 10px;
+  margin: 30px;
+
+}
+
+.printpokemonbar{
+  background:#292929;
+}
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #292929;
+}
