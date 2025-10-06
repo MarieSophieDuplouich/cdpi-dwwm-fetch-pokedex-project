@@ -1,5 +1,4 @@
 * {
-  /* border: black 1px solid; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,10 +19,11 @@ body {
   text-align: center;
   background-color: #ef3e3e;
 }
-.grid-pokemon{
-column-count: 2;
-margin: 30px;
-
+main{
+display: grid;
+grid-template-columns: 1fr 1fr;
+min-height: 100vh;
+padding: 10px;
 }
 .pokemon{
   background:#292929;

@@ -17,31 +17,28 @@
 
 <body>
     <h1>Bienvenue dans le Pokedex</h1>
-    <div class="grid-pokemon">
-        <header>
-            <search>
-                <form action="">
+        <main>
+        <section class="pokemon-list">
+            <template class="template-pokemon">
+                <div class="pokemon">
+                    <p></p>
+                    <img src="" alt="" class="image">
+                </div>
+            </template>
+        </section>
+
+
+
+        
+        <section class="pokemon-detail">
+               
+                <form class="search-pokemon" action="">
                     <label for="pokemon">Pour trouver ton Pokémon, tape son numéro, son nom tout simplement</label>
                     <i class="fa-solid fa-magnifying-glass" style="color:#ffffff;"></i>
-                    <input type="search" id="pokemon" name="q" />
+                    <input type="text" id="pokemon" name="search-input" />
                     <button type="submit">Rechercher</button>
                 </form>
-            </search>
-        </header>
-        <section class="liste-pokemon">
-            <div class="liste">
-                <div class="pokemon">
-                    <h2>Question 1</h2>
-                </div>
-                <div class="pokemon">
-                    <h2>Question 2</h2>
-                </div>
-                <div class="pokemon">
-                    <h2>Question 3</h2>
-                </div>
-            </div>
-        </section>
-        <section class="pokemonitself">
+           
             <h2>n°3</h2>
             <img src="" alt="">
             <h3>Bulbizarre</h3>
@@ -57,8 +54,8 @@
 
             </div>
         </section>
-    </div>
-
+   
+    </main>
     <footer>
         <p>©2025 Marie-Sophie Duplouich</p>
     </footer>
