@@ -10,6 +10,9 @@
   font-style: normal;
 }
 
+.image {
+    width : 2rem;
+}
 body {
   font-family: "Patrick Hand", cursive;
   font-weight: 400;
@@ -29,7 +32,10 @@ padding: 10px;
   background:#292929;
   padding: 10px;
   margin: 30px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .printpokemonbar{
