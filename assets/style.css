@@ -13,6 +13,12 @@
 .image {
     width : 2rem;
 }
+
+svg {
+    width : 1rem;
+}
+
+
 body {
   font-family: "Patrick Hand", cursive;
   font-weight: 400;

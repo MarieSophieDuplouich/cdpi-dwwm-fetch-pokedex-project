@@ -26,3 +26,7 @@ function main() {
 main();
 
 
+
+// quand je clique sur la classe pokemon le pokemon choisi apparaît dans la partie droite avec son nom image et ses types
+
+
