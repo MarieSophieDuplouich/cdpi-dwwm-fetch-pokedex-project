@@ -17,12 +17,12 @@
 
 <body>
     <h1>Bienvenue dans le Pokedex</h1>
-        <main>
+    <main>
         <section class="pokemon-list">
             <template class="template-pokemon">
                 <div class="pokemon">
                     <div class="pokemon-id"></div>
-                    <p></p>
+                    <p class="name"></p>
                     <img src="" alt="" class="image">
                 </div>
             </template>
@@ -30,31 +30,48 @@
 
 
 
-        
+
         <section class="pokemon-detail">
-               
-                <form class="search-pokemon" action="">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-                    <input type="text" id="pokemon" name="search-input" />
-                    <button type="submit">Rechercher</button>
-                </form>
-           
-            <h2>n°3</h2>
-            <img src="" alt="">
-            <h3>Bulbizarre</h3>
-            <h4>Types</h4>
-            <div class="Lestypes">
-                <img src="" alt="">
-                <img src="" alt="">
+
+            <form class="search-pokemon" action="">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free v5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path fill="#ffffff"
+                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                </svg>
+                <input type="text" id="pokemon" name="search-input" />
+                <button type="submit">Rechercher</button>
+            </form>
+
+
+
+            <!-- le pokemon choisi ici et sera affiché ici -->
+            <div class="pokemon-choisi">
+                <h2 class="pokemon-id"></h2>
+                <img src="" alt="" class="image-choisie">
+                <h3 class="pokemon-name"></h3>
+                <h4>Types</h4>
+                <div class="Lestypes">
+
+                    <!-- https://pokebuildapi.fr/api/v1/types -->
+                    <img class="type" src="" alt="">
+                </div>
             </div>
+
             <h4>Evolution</h4>
             <div class="printpokemonbar">
-                ncsuijshfuvszjvldsfk,
-                sfv,kdgj,kbdgkbjkif
-
+                <div class="pokemonevolved">
+                    <div class="pokemon-evolution-id"></div>
+                    <p class="name-evolution"></p>
+                    <img src="" alt="" class="image">
+                </div>
             </div>
+
+            <!-- le pokemon choisi ici et sera affiché ici -->
+
+
         </section>
-   
+
     </main>
     <footer>
         <p>©2025 Marie-Sophie Duplouich</p>
