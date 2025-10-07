@@ -105,3 +105,23 @@ function ajouterEvenementsPokemon() {
 
 // Appelle cette fonction après un petit délai pour que main() ait fini d’ajouter les Pokémon
 setTimeout(ajouterEvenementsPokemon, 500);
+
+
+
+// barre de reherche javascript action input entrée dans al abree derecherhce que le nom concaténation
+// id nom et numéro avec ou sans majuscule ça doit marcher trim () etc 
+
+
+
+function filterByName(e) {
+  const items = document.querySelectorAll(".pokemon");
+  const searchTerm = e.target.value.trim().toLowerCase();
+  
+  items.forEach(item => {
+    item.style.display = 'revert';
+    
+    if (!item.innerText.toLowerCase().includes(searchTerm)) {
+      item.style.display = 'none';
+    }
+  })
+}
