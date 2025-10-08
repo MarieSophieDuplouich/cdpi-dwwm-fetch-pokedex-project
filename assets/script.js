@@ -116,12 +116,21 @@ setTimeout(ajouterEvenementsPokemon, 500);
 function filterByName(e) {
   const items = document.querySelectorAll(".pokemon");
   const searchTerm = e.target.value.trim().toLowerCase();
-  
+//   e.preventDefault(); 
+//   ça empêche que le formulaire buggue mais ici ça ne sert à rien
   items.forEach(item => {
-    item.style.display = 'revert';
     
     if (!item.innerText.toLowerCase().includes(searchTerm)) {
       item.style.display = 'none';
     }
   })
 }
+
+//pour que la page se recharge correctement en effaçant les données en dur mais là ça le fait bugger tant pis
+
+// reload the current page
+// window.location.reload(true);
+
+document.querySelector(".search-pokemon").addEventListener("submit", function(e) {
+  e.preventDefault(); 
+});

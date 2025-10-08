@@ -59,6 +59,13 @@ main {
   cursor: pointer;
 }
 
+.pokemon-list {
+  height: 900px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+}
+
 .printpokemonbar {
   background: #292929;
   padding: 30px;
@@ -85,27 +92,28 @@ footer {
 
 /* responsivité */
 
-@media (width <= 600px) {
+@media (width <=600px) {
   main {
-      grid-template-columns: 1fr;
-        padding: 5px;
+    grid-template-columns: 1fr;
+    padding: 5px;
   }
 
   .pokemon {
-  margin: 5px;
-}
+    margin: 5px;
+  }
 
-.pokemon-detail{
-   align-self: center;
-  order: -2;
-}
+  .pokemon-detail {
+    align-self: center;
+    order: -2;
+  }
 
 
-.image-choisie {
-  width: 10rem;
-}
-.type {
-  width: 4rem;
-}
+  .image-choisie {
+    width: 10rem;
+  }
+
+  .type {
+    width: 4rem;
+  }
 
 }
