@@ -111,7 +111,7 @@ setTimeout(ajouterEvenementsPokemon, 500);
 // barre de reherche javascript action input entrée dans al abree derecherhce que le nom concaténation
 // id nom et numéro avec ou sans majuscule ça doit marcher trim () etc 
 
-
+// revoir barre de recherche et rendre cliquable evoltuion
 
 function filterByName(e) {
   const items = document.querySelectorAll(".pokemon");
