@@ -109,7 +109,7 @@ function ajouterEvenementsPokemon() {
 }
 
 // Appelle cette fonction après un petit délai pour que main() ait fini d’ajouter les Pokémon
-setTimeout(ajouterEvenementsPokemon, 500);
+setTimeout(ajouterEvenementsPokemon, 5000);
 
 
 
