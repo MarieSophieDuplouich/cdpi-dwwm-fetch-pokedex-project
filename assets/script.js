@@ -49,10 +49,11 @@ function choisirpokemon(pokedexId) {
 
             //Partie Evolution
             const evolutionsContainer = document.querySelector(".printpokemonbar");
+           
             evolutionsContainer.innerHTML = ""; // vider avant d’ajouter
 
-            //evolution image
-            //<img src="" alt="" class="image"></img>
+            //evolution image 
+            //<img src="" alt="" class="image"></img> https://pokebuildapi.fr/api/v1/pokemon
             pokemon_obj.apiEvolutions.forEach(async ({pokedexId}) => {
                 const evolutionInfo = await fetch(`https://pokebuildapi.fr/api/v1/pokemon/${pokedexId}`).then(res=>res.json())
                 const evolutionDiv = document.createElement("div");
@@ -85,7 +86,11 @@ function choisirpokemon(pokedexId) {
                 evolutionDiv.appendChild(idEvolution);
                 evolutionDiv.appendChild(nameEvolution);
 
-                evolutionsContainer.appendChild(evolutionDiv);
+                evolutionDiv.addEventListener("click", () => {
+                    choisirpokemon(evolutionInfo.pokedexId);
+                });
+              evolutionsContainer.appendChild(evolutionDiv);
+     
             });
 
         })
@@ -113,24 +118,39 @@ setTimeout(ajouterEvenementsPokemon, 500);
 
 // revoir barre de recherche et rendre cliquable evoltuion
 
+
 function filterByName(e) {
+  e.preventDefault?.(); // si c’est un event de submit, ça évite le rechargement
+
   const items = document.querySelectorAll(".pokemon");
-  const searchTerm = e.target.value.trim().toLowerCase();
-//   e.preventDefault(); 
-//   ça empêche que le formulaire buggue mais ici ça ne sert à rien
+  const searchTerm = e.target.value
+    .normalize("NFD")               // décompose les lettres accentuées  "Normalization Form Decomposed" Forme de normalisation décomposée 
+    .replace(/[\u0300-\u036f]/g, "") // supprime les accents
+    .toLowerCase()                  // met tout en minuscules
+    .trim();                        // supprime les espaces
+
   items.forEach(item => {
-    
-    if (!item.innerText.toLowerCase().includes(searchTerm)) {
-      item.style.display = 'none';
-    }
-  })
+    const text = item.innerText
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+
+    item.style.display = text.includes(searchTerm) ? "" : "none";
+  });
 }
 
-//pour que la page se recharge correctement en effaçant les données en dur mais là ça le fait bugger tant pis
+// Empêche le rechargement du formulaire
+document.querySelector(".search-pokemon").addEventListener("submit", e => e.preventDefault());
 
-// reload the current page
-// window.location.reload(true);
 
-document.querySelector(".search-pokemon").addEventListener("submit", function(e) {
-  e.preventDefault(); 
-});
+
+//NFD 💡 Explication simple :
+
+// “Forme décomposée” signifie que les caractères accentués sont séparés de leurs accents.
+
+// Par exemple :
+
+// La lettre é devient e + ´ (un e suivi du caractère accent aigu).
+
+// Cela permet ensuite de supprimer les accents facilement pour des recherches insensibles aux accents.
