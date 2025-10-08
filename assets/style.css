@@ -12,9 +12,10 @@
 }
 
 
-.image-choisie{
+.image-choisie {
   width: 30rem;
 }
+
 .image {
   width: 2rem;
 }
@@ -79,4 +80,32 @@ footer {
   padding: 5px;
   background-color: #abbaba;
   color: #292929;
+}
+
+
+/* responsivité */
+
+@media (width <= 600px) {
+  main {
+      grid-template-columns: 1fr;
+        padding: 5px;
+  }
+
+  .pokemon {
+  margin: 5px;
+}
+
+.pokemon-detail{
+   align-self: center;
+  order: -2;
+}
+
+
+.image-choisie {
+  width: 10rem;
+}
+.type {
+  width: 4rem;
+}
+
 }
